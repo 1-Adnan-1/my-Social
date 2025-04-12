@@ -1,13 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #17202a;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  opacity: 0;
+  animation: fadeInBackground 1.5s forwards;
 }
 
 .app {
@@ -15,6 +17,8 @@ body {
   width: 90%;
   padding: 2rem 1rem;
   text-align: center;
+  transform: translateY(100px);
+  animation: bounceUp 1.2s 0.5s forwards;
 }
 
 .profile-header img.profile-pic {
@@ -24,18 +28,24 @@ body {
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 2px solid white;
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
 }
 
 .profile-header h2 {
   margin: 0;
   font-size: 1.5rem;
   white-space: nowrap;
+  opacity: 0;
+  animation: slideIn 1s 1.5s forwards;
 }
 
 .profile-header p {
   font-size: 0.9rem;
   color: #ccc;
   white-space: nowrap;
+  opacity: 0;
+  animation: slideIn 1s 2s forwards;
 }
 
 .social-links {
@@ -45,7 +55,10 @@ body {
   gap: 1.2rem;
   font-size: 1.5rem;
   cursor: pointer;
+  opacity: 0;
+  animation: scaleIn 1s 2.5s forwards;
 }
+
 .social-links a {
   color: #fff;
 }
@@ -54,10 +67,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1s 3s forwards;
 }
 
 .link-button {
-  background-color: #1c1c1c;
+  background-color: #1f344b;
   padding: 1.7rem 1.5rem;
   border-radius: 20px;
   display: flex;
@@ -67,12 +82,13 @@ body {
   justify-content: center;
   text-decoration: none;
   color: white;
-
   box-sizing: border-box;
+  transform: scale(0);
+  animation: scaleUp 0.6s 3.5s forwards;
 }
 
 .link-button:hover {
-  background-color: #4b4a4ace;
+  background-color: #1f344bc3;
 }
 
 .link-button .left-icon {
@@ -83,4 +99,70 @@ body {
 
 .link-text {
   font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -8,6 +8,7 @@ import {
   FaXTwitter,
   FaWhatsapp,
   FaGlobe,
+  FaFilePdf, // PDF simgesi için yeni bir icon ekledik
 } from "react-icons/fa6";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           text="Portfolio"
           link="https://byadnansami.netlify.app/"
         />
+        <LinkButton icon={<FaFilePdf />} text="CV" link="/cv.pdf" />
       </div>
     </div>
   );
