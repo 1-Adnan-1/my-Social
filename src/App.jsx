@@ -40,7 +40,7 @@ function App() {
         <LinkButton
           icon={<FaGlobe />}
           text="Portfolio"
-          link="https://byadnansami.netlify.app/"
+          link="http://byadnansami.com/"
         />
         <LinkButton icon={<FaFilePdf />} text="CV" link="/cv.pdf" />
       </div>
