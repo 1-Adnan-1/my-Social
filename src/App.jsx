@@ -8,12 +8,14 @@ import {
   FaXTwitter,
   FaWhatsapp,
   FaGlobe,
-  FaFilePdf, // PDF simgesi için yeni bir icon ekledik
+  FaFilePdf,
 } from "react-icons/fa6";
+import Theme from "./components/Theme";
 
 function App() {
   return (
     <div className="app">
+      <Theme />
       <ProfileHeader />
       <SocialLinks />
       <div className="links">
