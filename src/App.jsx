@@ -44,7 +44,6 @@ function App() {
           text="Portfolio"
           link="http://byadnansami.com/"
         />
-        <LinkButton icon={<FaFilePdf />} text="CV" link="/cv.pdf" />
       </div>
     </div>
   );
